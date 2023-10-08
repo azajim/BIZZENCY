@@ -251,9 +251,9 @@ body{
    color: var(--btn-color);
 }
 #banner .play{
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 55px;
+  height: 55px;
+  line-height: 50px;
   border-radius:50% ;
   text-align: center;
   border: 1px solid transparent; 
@@ -377,6 +377,7 @@ body{
          #services  .service-box .service-overlay h4{
         font-size: 20px;
         margin-top: 20px;
+        color: var(--light-color);
       }
        #services  .service-box .service-overlay a .play{
         color: var(--primary-color);
@@ -425,6 +426,130 @@ body{
      /* service section ending */
 
       /* portfolio section starting */
-      
+      #portfolio{
+        padding: 100px 0;
+      }
+      #portfolio .row .portfolio-img {
+        width: calc((100% - 120px) / 3 );
+        margin: 60px 0;
+        box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.15) ;
+        position: relative;
+      }  
+        #portfolio .row .portfolio-img img{
+          max-width: 100%;
+          display: block;
+        }
+        #portfolio .row .portfolio-img .portfolio-overlay{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transform-origin: top left;
+        transform: scaleY(0);
+        transition: var(--transition-medium);
+      }
+       #portfolio .row .portfolio-img:hover .portfolio-overlay{
+        transform: scaleY(1);     
+        transform-origin:top right;
+
+       }
+      #portfolio .row .portfolio-img .portfolio-overlay h4{
+        font-size: 20px;
+        color: var(--primary-color);
+        font-weight: 500;
+        background-color: var(--light-color);   
+        padding: 26px 0;
+      }
+      #portfolio .btn{
+        margin: auto;
+      }
       /* portfolio section ending */
     
+       /* testimonial section starting */
+      #testimonial{
+        padding: 60px 0;
+        background-color: var(--service-bg);
+      }
+       #testimonial .testimonial-img{
+        width: calc( (100% - 30px) / 2);
+        background-color: var(--service-inner-bg);
+       }
+       #testimonial .testimonial-img img{
+        width: 215px;
+        height: 100%;
+        display: block;
+        /* object-fit: cover;
+        object-position: center; */
+       }
+       #testimonial .testimonial-info{
+        width: calc(100% - 215px);
+        padding: 30px 20px;
+       }
+       #testimonial .testimonial-img p{
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--primary-color);
+       }
+       #testimonial .testimonial-info h4{
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--primary-color);
+        font-weight: 500;
+        padding-top: 30px;
+        padding-bottom: 10px;
+       }
+       #testimonial .testimonial-info small{
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--primary-color);
+        font-weight: 300;
+       }
+       /* testimonial section ending */
+
+        /* blogs section starting */
+        #blog{
+          padding: 100px 0;
+        }
+        #blog .blog-box{
+          width: calc((100% - 120px) / 3 );
+          padding: 20px;
+          background-color: var(--service-bg);
+          transition: var(--transition-medium);
+          border-radius: 5px;
+          margin: 30px 0 60px;
+        }
+         #blog .blog-box:hover {
+          background-color: var(--primary-color);
+          border-radius: 5px;
+         }
+         #blog .blog-box:hover .blog-info p,
+          #blog .blog-box:hover .blog-info h4,
+          #blog  .blog-box:hover .blog-info a {
+            color: var(--light-color);
+          }
+        #blog .blog-box .blog-info p{
+          font-family: var(--secondary-font);
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+          color: var(--footer-color);
+          padding-bottom: 20px;
+        }
+        #blog .blog-box .blog-info h4{
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 26px;
+          color: var(--text);
+        }
+        #blog .blog-box .blog-info a{
+          font-family: var(--secondary-font);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 26px;
+          color: var(--footer-color);
+          padding-top: 30px;
+        }
+        #blog .btn{
+          margin: auto;
+        }
+        /* blogs section ending */
